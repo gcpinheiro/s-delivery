@@ -1,0 +1,56 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-nav-list fxLayout="column" fxLayoutAlign="center center">
+      <img src="./assets/logo-image.jpeg" class="logo">
+      <div fxLayout="row" fxLayoutAlign="start center"  style="margin: 10% 1%; border: solid 1px #1FABE7;; width: 90%; height: 80px; border-radius: 15px; background-color: white;">
+        <div fxLayout="column" fxLayoutAlign="center center" style="width: 25%;">
+          <mat-icon>store</mat-icon>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start start" style="width: 75%; font-size: 18px;">
+          <span>Padaria Primeira Linha</span>
+          <span style="color: blue;">Aberto</span>
+        </div>
+      </div>
+
+      <div style="width: 100%;">
+         <a mat-list-item href="#" style="background-color: white; padding-left: 30px;"><mat-icon>home</mat-icon><span style="padding-left: 5px;">Início</span></a>
+         <a mat-list-item href="#" style="padding-left: 30px;"><mat-icon>list_alt</mat-icon><span style="padding-left: 5px;">Pedidos</span></a>
+        <a mat-list-item href="#" style="padding-left: 30px;"><mat-icon>grade</mat-icon><span style="padding-left: 5px;">Avaliações</span></a>
+        <a mat-list-item href="#" style="padding-left: 30px;"><mat-icon>paid</mat-icon><span style="padding-left: 5px;">Financeiro</span></a>
+      </div>
+
+       <div style="width: 100%;">
+         <a mat-list-item href="#" style="background-color: white; padding-left: 30px;"><mat-icon>article</mat-icon><span style="padding-left: 5px;">Cardápios</span></a>
+         <a mat-list-item href="#" style="padding-left: 30px;"><mat-icon>alarm</mat-icon><span style="padding-left: 5px;">Horários</span></a>
+        <a mat-list-item href="#" style="padding-left: 30px;"><mat-icon>room</mat-icon><span style="padding-left: 5px;">Localização</span></a>
+        <a mat-list-item href="#" style="padding-left: 30px;"><mat-icon>sell</mat-icon><span style="padding-left: 5px;">Promoções</span></a>
+      </div>
+
+       <div style="width: 100%;">
+         <a mat-list-item href="#" style="background-color: white; padding-left: 30px;"><mat-icon>store</mat-icon><span style="padding-left: 5px;">Perfil</span></a>
+         <a mat-list-item href="#" style="padding-left: 30px;"><mat-icon>bar_chart</mat-icon><span style="padding-left: 5px;">Estatísticas</span></a>
+        <a mat-list-item href="#" style="padding-left: 30px;"><mat-icon>emoji_objects</mat-icon><span style="padding-left: 5px;">Dicas</span></a>
+        <a mat-list-item href="#" style="padding-left: 30px;"><mat-icon>help_outline</mat-icon><span style="padding-left: 5px;">Ajuda</span></a>
+      </div>      
+       
+      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>simbora2</span>
+    </mat-toolbar>
+    <app-dashboard></app-dashboard>
+  </mat-sidenav-content>
+</mat-sidenav-container>

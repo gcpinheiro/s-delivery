@@ -1,0 +1,106 @@
+<mat-grid-list cols="6" rowHeight="100vh" class="grid">
+  <mat-grid-tile colspan="2" class="col-left" >
+
+     <div class="col-left">
+        
+     </div>  	
+
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="4" rowHeight="100vh" >
+  		<div fxLayout="column" fxLayoutAlign="center stretch" style="margin:0; padding:0; height: 100%; " > 
+	  		<div fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 25px;" >
+	  			<img src="./assets/logo-image.jpeg" class="logo">
+	  		</div>
+
+	  		<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 25px;">
+			  <mat-form-field appearance="outline" floatLabel="always" hideRequiredMarker color="green">
+			    <mat-label>Email</mat-label>
+			    <input matInput placeholder="name@email.com" [formControl]="email" required>
+			    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+			  </mat-form-field>
+			</div>
+
+			
+
+			<div fxLayout="row" fxLayoutAlign="center center" >
+			  <mat-form-field appearance="outline" floatLabel="always"  hideRequiredMarker>
+			    <mat-label >Senha</mat-label>
+			    <input matInput [type]="hide ? 'password' : 'text'" required placeholder="Sua senha" >
+			    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+			    <mat-icon style="cursor: pointer;" >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>			    
+			    </button>
+			  </mat-form-field>			  
+			</div>
+
+			<div>
+				<a style="padding-left: 68%;" href="#">Esqueci meu e-mail ou senha</a>
+			</div>
+
+			<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 25px;">
+				<button mat-button color="warn" style="width: 70%; cursor: pointer;">Enviar</button>			   
+			</div>
+
+			<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 15px;">
+				<span>Ainda não tem cadastro? <a href="#">Cadastre-se aqui</a></span>
+			</div>
+		</div>
+  </mat-grid-tile>
+ 
+</mat-grid-list>
+
+<!--
+<mat-grid-list cols="6" rowHeight="100vh" class="grid">
+  <mat-grid-tile colspan="2" class="col-left" >
+
+     <div class="col-left">
+        
+     </div>  	
+
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="4" rowHeight="100vh" >
+  		<div style="padding: 0; margin: 0;">
+	  		<div class="align-itens-center" >
+	  			<img src="./assets/logo-image.jpeg" class="logo">
+	  		</div>
+
+	  		<div class="align-itens-center" >
+			  <mat-form-field appearance="outline" floatLabel="always" hideRequiredMarker color="green">
+			    <mat-label>Email</mat-label>
+			    <input matInput placeholder="name@email.com" [formControl]="email" required>
+			    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+			  </mat-form-field>
+			</div>
+
+			
+
+			<div class="align-itens-center">
+			  <mat-form-field appearance="outline" floatLabel="always"  hideRequiredMarker>
+			    <mat-label >Senha</mat-label>
+			    <input matInput [type]="hide ? 'password' : 'text'" required placeholder="Sua senha">
+			    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+			    <mat-icon style="cursor: pointer;" >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>			    
+			    </button>
+			  </mat-form-field>			  
+			</div>
+
+			<div class="align-itens-center"  style="width: 100%;">
+				<a style="padding-left: 62%;" href="#">Esqueci meu e-mail ou senha</a>
+			</div>
+
+			<div class="align-itens-center" >
+				<button mat-button color="warn" style="width: 80%; cursor: pointer;">Enviar</button>			   
+			</div>
+
+			<div class="align-itens-center"  style="width: 100%;" style="background-color: green;">
+				<p>Ainda não tem cadastro?</p><a style="padding-left: 62%;" href="#">Cadastre-se aqui</a>
+			</div>
+		</div>
+  </mat-grid-tile>
+ 
+</mat-grid-list>
+-->
+
+
+
