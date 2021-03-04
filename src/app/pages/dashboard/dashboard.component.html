@@ -1,24 +1,130 @@
-<div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+	<div class="container-child" >
+
+		<div>
+			<span style="font-size: 23px; font-weight: bolder; color: #F9A825">Acompanhamento</span>
+		</div>
+
+		<div style="margin-top: 14px;">
+			<div fxLayout="row" fxLayoutAlign="space-between start">
+				<div fxLayout="column" fxLayoutAlign="space-between start" >
+					<div>
+						<span>Tempo real</span>
+					</div>
+
+					
+					<div class="info-top" fxLayout="row" fxLayoutAlign="space-around center">
+						<div fxLayout="column" fxLayoutAlign="space-around center" style="height: 100%;" >
+							<span>Pedidos</span>
+							<span class="numeros-acompanhamento">10</span>
+						</div>
+
+						<div style="height: 60px; border-right: 1px solid #EFEFEF;"></div>
+
+						<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;">
+							<span>Faturamento total</span>
+							<span class="numeros-acompanhamento">R$ 130,00</span>
+						</div>
+					</div>
+				</div>			
+
+				<div fxLayout="column" fxLayoutAlign="space-between start" >
+					<div>
+						<span>Esse mês</span>
+					</div>
+					
+					<div class="info-top" fxLayout="row" fxLayoutAlign="space-around center">
+						<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;">
+							<span>Pedidos</span>
+							<span class="numeros-acompanhamento">356</span>
+						</div>
+
+						<div style="height: 60px; border-right: 1px solid #EFEFEF;"></div>
+
+						<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;" >
+							<span>Faturamento</span>
+							<span class="numeros-acompanhamento">R$ 4126,00</span>
+						</div>
+
+						<div style="height: 60px; border-right: 1px solid #EFEFEF;"></div>
+
+						<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;" >
+							<span>Ticket medio</span>
+							<span class="numeros-acompanhamento">R$ 36,00</span>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+
+		<div style="margin-top: 20px;">
+			<span style="font-size: 23px; font-weight: bolder; color: #F9A825">Performance</span>
+		</div>
+			<!-- CONTAINER DESEMPENHO -->
+		<div fxLayout="column" fxLayoutAlign="start  stretch"  style="margin-top: 20px; width: 100%; height: 700px; border-radius: 10px; background-color: #FFF; box-shadow: 0px 20px 5px black; padding: 4% 5%;">
+			
+			<!-- INFO DESEMPENHO -->
+
+			<div  fxLayout="row" fxLayoutAlign="start center" style=" height: 30px; padding-top: 15px; ">
+				<h3>Desempenho</h3> <p style="margin-left: 2%;">(último dia online)</p> 
+			</div>
+			
+			<div fxLayout="row" fxLayoutAlign="space-between center" style="height: 20%;">
+
+				<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%; ">
+						<span>Vendas</span>
+						<span class="numeros-performance" >25</span>
+						<span >R$ 326,00</span>
+				</div>
+
+
+				<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;">
+					<span>Novos Clientes</span>
+					<span class="numeros-performance" >15</span>
+					<span >R$ 230,00</span>
+				</div>
+
+
+				<div fxLayout="column" fxLayoutAlign="space-between center" style=" height: 100%;" >
+					<span>Prato mais vendidos</span>
+					<span class="numeros-performance" >Coxinha de Jaca</span>
+					<span>R$ 326,00</span>
+				</div>
+				
+			</div>
+
+			<!--LINHA-->
+			<div style="width: 100%; border-top: 2px solid #C4C4C4; margin-top: 10px;"></div>
+
+			<!--VENDAS-->
+
+			<div fxLayout="row" fxLayoutAlign="space-between center" style="height: 20%;">
+
+				<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%; ">
+						<span>Vendas</span>
+						<span class="numeros-performance" >25</span>
+						<span >R$ 326,00</span>
+				</div>
+
+
+				<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;">
+					<span>Novos Clientes</span>
+					<span class="numeros-performance" >15</span>
+					<span >R$ 230,00</span>
+				</div>
+
+
+				<div fxLayout="column" fxLayoutAlign="space-between center" style=" height: 100%;" >
+					<span>Prato mais vendidos</span>
+					<span class="numeros-performance" >Coxinha de Jaca</span>
+					<span>R$ 326,00</span>
+				</div>
+				
+			</div>
+
+
+		</div>
+
+	</div>
 </div>
+					
