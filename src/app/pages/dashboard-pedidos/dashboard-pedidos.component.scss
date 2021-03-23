@@ -1,0 +1,28 @@
+.container{
+  width: 100%; 
+  height: 100%; 
+  background-color: #FBFAFA;
+  font-family: 'Louis George Cafe';
+}
+
+.container-child{
+  width: 90%; height: 90%;
+
+}
+
+.numeros-acompanhamento{
+  font-size: 30px; 
+  color: #F9A825; 
+  font-weight: bolder;
+}
+
+
+//rever melhor.
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #F9A825 !important;
+  border-radius: 20px !important;
+}
+button{
+  width: 140px;
+  border-radius: 14px;
+}

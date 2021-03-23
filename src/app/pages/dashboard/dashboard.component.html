@@ -2,10 +2,10 @@
 	<div class="container-child" >
 
 		<div>
-			<span style="font-size: 23px; font-weight: bolder; color: #F9A825">Acompanhamento</span>
+			<span class="cabecalho-acompanhamento">Acompanhamento</span>
 		</div>
 
-		<div style="margin-top: 14px;">
+		<div class="informativo-acompanhamento">
 			<div fxLayout="row" fxLayoutAlign="space-between start">
 				<div fxLayout="column" fxLayoutAlign="space-between start" >
 					<div>
@@ -13,15 +13,16 @@
 					</div>
 
 					
-					<div class="info-top" fxLayout="row" fxLayoutAlign="space-around center">
-						<div fxLayout="column" fxLayoutAlign="space-around center" style="height: 100%;" >
+					<div class="info-top-1" fxLayout="row" fxLayoutAlign="space-around center">
+						<div fxLayout="column" fxLayoutAlign="space-around center">
 							<span>Pedidos</span>
 							<span class="numeros-acompanhamento">10</span>
 						</div>
 
-						<div style="height: 60px; border-right: 1px solid #EFEFEF;"></div>
+						<!-- Linha vertical direita -->
+						<div class="linha-borda-direita"></div>
 
-						<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;">
+						<div fxLayout="column" fxLayoutAlign="space-around center">
 							<span>Faturamento total</span>
 							<span class="numeros-acompanhamento">R$ 130,00</span>
 						</div>
@@ -33,22 +34,24 @@
 						<span>Esse mês</span>
 					</div>
 					
-					<div class="info-top" fxLayout="row" fxLayoutAlign="space-around center">
-						<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;">
+					<div class="info-top-2" fxLayout="row" fxLayoutAlign="space-around center">
+						<div fxLayout="column" fxLayoutAlign="space-around center">
 							<span>Pedidos</span>
 							<span class="numeros-acompanhamento">356</span>
 						</div>
 
-						<div style="height: 60px; border-right: 1px solid #EFEFEF;"></div>
+						<!-- Linha vertical direita -->
+						<div class="linha-borda-direita"></div>
 
-						<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;" >
+						<div fxLayout="column" fxLayoutAlign="space-around center">
 							<span>Faturamento</span>
 							<span class="numeros-acompanhamento">R$ 4126,00</span>
 						</div>
 
-						<div style="height: 60px; border-right: 1px solid #EFEFEF;"></div>
+						<!-- Linha vertical direita -->
+						<div class="linha-borda-direita"></div>
 
-						<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;" >
+						<div fxLayout="column" fxLayoutAlign="space-around center">
 							<span>Ticket medio</span>
 							<span class="numeros-acompanhamento">R$ 36,00</span>
 						</div>
@@ -57,35 +60,36 @@
 			</div>
 		</div>
 
-		<div style="margin-top: 20px;">
-			<span style="font-size: 23px; font-weight: bolder; color: #F9A825">Performance</span>
+		<div class="performance">
+			<span>Performance</span>
 		</div>
-			<!-- CONTAINER DESEMPENHO -->
-		<div fxLayout="column" fxLayoutAlign="start  stretch"  style="margin-top: 20px; width: 100%; height: 700px; border-radius: 10px; background-color: #FFF; box-shadow: 0px 20px 5px black; padding: 4% 5%;">
+
+			<!-- CONTAINER PERFORMANCE -->
+		<div class="container-performance" fxLayout="column" fxLayoutAlign="start  stretch">
 			
 			<!-- INFO DESEMPENHO -->
 
-			<div  fxLayout="row" fxLayoutAlign="start center" style=" height: 30px; padding-top: 15px; ">
-				<h3>Desempenho</h3> <p style="margin-left: 2%;">(último dia online)</p> 
+			<div class="desempenho" fxLayout="row" fxLayoutAlign="start center">
+				<h3>Desempenho</h3> <p>(último dia online)</p> 
 			</div>
 			
-			<div fxLayout="row" fxLayoutAlign="space-between center" style="height: 20%;">
+			<div class="desempenho-informativos" fxLayout="row" fxLayoutAlign="space-between center">
 
-				<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%; ">
+				<div fxLayout="column" fxLayoutAlign="space-around center">
 						<span>Vendas</span>
 						<span class="numeros-performance" >25</span>
 						<span >R$ 326,00</span>
 				</div>
 
 
-				<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;">
+				<div fxLayout="column" fxLayoutAlign="space-around center">
 					<span>Novos Clientes</span>
 					<span class="numeros-performance" >15</span>
 					<span >R$ 230,00</span>
 				</div>
 
 
-				<div fxLayout="column" fxLayoutAlign="space-between center" style=" height: 100%;" >
+				<div fxLayout="column" fxLayoutAlign="space-around center">
 					<span>Prato mais vendidos</span>
 					<span class="numeros-performance" >Coxinha de Jaca</span>
 					<span>R$ 326,00</span>
@@ -94,34 +98,313 @@
 			</div>
 
 			<!--LINHA-->
-			<div style="width: 100%; border-top: 2px solid #C4C4C4; margin-top: 10px;"></div>
+			<div class="div-line"></div>
 
-			<!--VENDAS-->
+			
 
-			<div fxLayout="row" fxLayoutAlign="space-between center" style="height: 20%;">
+			<!--------------------------------------VENDAS----------------------------------------->
 
-				<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%; ">
-						<span>Vendas</span>
-						<span class="numeros-performance" >25</span>
-						<span >R$ 326,00</span>
+			<div class="container-vendas" fxLayout="column" fxLayoutAlign="space-around none">
+
+				<div class="titulo-vendas" fxLayout="row" fxLayoutAlign="start center">
+
+					<div fxLayout="row" fxLayoutAlign="start center">
+						<p class="subtítulo">Vendas</p> <p class="subtítulo-ultimos-7-dias">(últimos 7 dias)</p>
+					</div>
+
+					<div class="titulo-vendas-linha-2" fxLayout="row" fxLayoutAlign="start center">
+						<p class="subtítulo"> Operações</p><p class="subtítulo-ultimos-7-dias">(últimos 7 dias)</p>
+					</div>
 				</div>
 
+				<div class="info-ultimos-7-dias" fxLayout="row" fxLayoutAlign="space-between center">
+					
+					<div class="primeira-coluna" fxLayout="column" fxLayoutAlign="space-between center">
+						<span>Total de pedidos</span>
+						<span class="numeros-performance">25</span>
+						<span>Valor total</span>
+						<span>R$ 1164,00</span>
+						
+					</div>
 
-				<div fxLayout="column" fxLayoutAlign="space-around center" style=" height: 100%;">
-					<span>Novos Clientes</span>
-					<span class="numeros-performance" >15</span>
-					<span >R$ 230,00</span>
+					<div class="segunda-coluna" fxLayout="column" fxLayoutAlign="start start">
+
+						<div fxLayout="row" fxLayoutAlign="start start">
+							<div fxLayout="column" fxLayoutAlign="space-between start">
+								<span>Tempo online</span>
+								<span class="numeros-performance" >25h20min</span>
+								<p>30% a menos que os restaurantes da mesma categoria</p>
+							</div>
+
+							<div class="coluna-cancelamento" fxLayout="column" fxLayoutAlign="space-between start">
+								<span>Cancelamentos</span>
+								<span class="numeros-performance" >5</span>
+								<p>10% menos que os demais restaurantes da mesma categoria</p>
+							</div>
+
+						</div>
+
+					</div>
 				</div>
 
+			</div>
 
-				<div fxLayout="column" fxLayoutAlign="space-between center" style=" height: 100%;" >
-					<span>Prato mais vendidos</span>
-					<span class="numeros-performance" >Coxinha de Jaca</span>
-					<span>R$ 326,00</span>
+			<!--LINHA-->
+			<div class="div-line"></div>
+
+			<!---------------------------------------GRÁFICO DE VENDAS----------------------------------->
+
+			<!----- CONTAINER GRÁFICO---->
+
+			<div class="container-grafico" fxLayout="column" fxLayoutAlign="space-between none">
+				<div fxLayout="row" fxLayoutAlign="start center">
+					<p class="subtítulo">Vendas</p> <p class="subtítulo-grafico-ultimos-10-dias">(últimos 10 dias)</p>
+				</div>
+
+				<!-----GRÁFICO---->
+
+				<div class="grafico">
+					
 				</div>
 				
 			</div>
 
+			<!--LINHA-->
+			<div class="div-line"></div>
+
+			<!--------------------------------VENDAS NOS FINS DE SEMANA-------------------------------->
+
+			<!-----CONTAINER INFORMATIVO DOS FINAIS DE SEMANA--->
+
+			<div class="container-fins-de-semana" fxLayout="column" fxLayoutAlign="start stretch">
+
+				<div fxLayout="row" fxLayoutAlign="start center">
+					<p class="subtítulo">Vendas nos fins de semana</p> <p class="titulo-fins-de-semana">(últimos 10 dias)</p>
+				</div>
+
+				<!-----INFORMATIVOS---->
+
+				<div class="container-colunas" fxLayout="row" fxLayoutAlign="start none">
+
+					<div class="primeira-coluna-fins-semana" fxLayout="column" fxLayoutAlign="start center">
+						<div class="sexta-fins-semana" fxLayout="row" fxLayoutAlign="center center">
+							<p class="subtítulo">Sexta</p>
+						</div>
+
+						<div class="sexta-info" fxLayout="column" fxLayoutAlign="space-between start">
+							
+							<span>Vendas</span>
+							<span class="numeros-performance">16</span>
+							<span>R$ 213,00</span>
+							<div class="tempo-online" fxLayout="row" fxLayoutAlign="space-between start"> 
+								<span>Tempo on-line</span>
+								<span>04h30min</span>
+							</div>
+							<div class="cancelamentos" fxLayout="row" fxLayoutAlign="space-between start"> 
+								<span>Cancelamentos</span>
+								<span>3</span>
+							</div>
+						
+						</div>
+					</div>
+					<!--LINHA-->
+					<div class="linha-borda-direita-vendas"></div>
+
+					<div class="segunda-coluna-fins-semana" fxLayout="column" fxLayoutAlign="start center">
+						<div class="sabado-fins-semana" fxLayout="row" fxLayoutAlign="center center">
+							<p class="subtítulo">Sábado</p>
+						</div>
+
+						<div class="sabado-info" fxLayout="column" fxLayoutAlign="space-between start">
+							
+							<span>Vendas</span>
+							<span class="numeros-performance">16</span>
+							<span>R$ 213,00</span>
+							<div class="tempo-online" fxLayout="row" fxLayoutAlign="space-between start"> 
+								<span>Tempo on-line</span>
+								<span>04h30min</span>
+							</div>
+							<div class="cancelamentos" fxLayout="row" fxLayoutAlign="space-between start"> 
+								<span>Cancelamentos</span>
+								<span>3</span>
+							</div>
+						
+						</div>
+					</div>
+					<!--LINHA-->
+					<div class="linha-borda-direita-vendas"></div>
+
+					<div class="terceira-coluna-fins-semana" fxLayout="column" fxLayoutAlign="start center">
+
+						<div class="domingo-fins-semana" fxLayout="row" fxLayoutAlign="center center">
+							<p class="subtítulo">Domingo</p>
+						</div>
+
+						<div class="doimingo-info" fxLayout="column" fxLayoutAlign="space-between start">
+							
+							<span>Vendas</span>
+							<span class="numeros-performance">16</span>
+							<span>R$ 213,00</span>
+							<div class="tempo-online" fxLayout="row" fxLayoutAlign="space-between start"> 
+								<span>Tempo on-line</span>
+								<span>04h30min</span>
+							</div>
+							<div class="cancelamentos" fxLayout="row" fxLayoutAlign="space-between start"> 
+								<span>Cancelamentos</span>
+								<span>3</span>
+							</div>
+						
+						</div>
+					</div>
+
+					
+				</div>
+				
+			</div>
+
+			<!--LINHA-->
+			<div class="div-line"></div>
+
+
+			<!------------------------------VENDAS NOS FINS DE SEMANA------------------------------>
+
+			<!-----DIV CONTAINER---->
+
+			<div class="container-vendas-ultimas-semanas" fxLayout="column" fxLayoutAlign="start none">
+				<div fxLayout="row" fxLayoutAlign="start center">
+					<p class="subtítulo">Vendas nos fins de semana</p> <p class="ultimas-semanas-paragrafo">(últimas 4 semanas)</p>
+				</div>
+
+				
+
+				<div class="conteudo-fins-semana">
+					<div class="coluna-container" fxLayout="column" fxLayoutAlign="start stretch">
+
+						<div class="primeira-linha" fxLayout="row" fxLayoutAlign="start stretch">
+
+							<div class="primeiro-quadrante" fxLayout="column" fxLayoutAlign="start stretch">
+
+								<div class="div-subtitulo" fxLayout="row" fxLayoutAlign="center center">
+									<p class="subtítulo">Segundas</p>
+								</div>
+
+								<div class="informativo-vendas" fxLayout="column" fxLayoutAlign="space-between start">
+							
+									<span>Vendas</span>
+									<span class="numeros-performance">16</span>
+									<span>R$ 213,00</span>
+									<div fxLayout="row" fxLayoutAlign="space-between start" > 
+										<span>Tempo on-line</span>
+										<span>04h30min</span>
+									</div>
+									<div fxLayout="row" fxLayoutAlign="space-between start"> 
+										<span>Cancelamentos</span>
+										<span>3</span>
+									</div>
+								
+								</div>
+
+								<!--LINHA-->
+
+								<div class="borda-bottom-fins-semana"></div>
+	
+							</div>
+
+							<!--LINHA-->
+
+							<div class="borda-direita-fins-semana"></div>
+
+							<div class="segundo-quadrante" fxLayout="column" fxLayoutAlign="start stretch">
+
+								<div class="div-subtitulo" fxLayout="row" fxLayoutAlign="center center">
+									<p class="subtítulo">Terças</p>
+								</div>
+
+								<div class="informativo-vendas" fxLayout="column" fxLayoutAlign="space-between start">
+							
+									<span>Vendas</span>
+									<span class="numeros-performance">16</span>
+									<span>R$ 213,00</span>
+									<div fxLayout="row" fxLayoutAlign="space-between start"> 
+										<span>Tempo on-line</span>
+										<span>04h30min</span>
+									</div>
+									<div fxLayout="row" fxLayoutAlign="space-between start"> 
+										<span>Cancelamentos</span>
+										<span>3</span>
+									</div>
+								
+								</div>
+
+								<!--LINHA-->
+
+								<div class="borda-bottom-fins-semana"></div>
+	
+							</div>
+							
+						</div>
+
+						<div class="segunda-linha" fxLayout="row" fxLayoutAlign="start stretch">
+
+							<div class="primeiro-quadrante" fxLayout="column" fxLayoutAlign="start stretch">
+
+								<div class="div-subtitulo" fxLayout="row" fxLayoutAlign="center center">
+									<p class="subtítulo">Quartas</p>
+								</div>
+
+								<div class="informativo-vendas" fxLayout="column" fxLayoutAlign="space-between start">
+							
+									<span>Vendas</span>
+									<span class="numeros-performance">16</span>
+									<span>R$ 213,00</span>
+									<div fxLayout="row" fxLayoutAlign="space-between start"> 
+										<span>Tempo on-line</span>
+										<span>04h30min</span>
+									</div>
+									<div fxLayout="row" fxLayoutAlign="space-between start"> 
+										<span>Cancelamentos</span>
+										<span>3</span>
+									</div>
+								
+								</div>
+	
+							</div>
+
+							<!--LINHA-->
+
+							<div class="borda-direita-fins-semana"></div>
+
+							<div class="segundo-quadrante" fxLayout="column" fxLayoutAlign="start stretch">
+
+								<div class="div-subtitulo" fxLayout="row" fxLayoutAlign="center center">
+									<p class="subtítulo">Quintas</p>
+								</div>
+
+								<div class="informativo-vendas" fxLayout="column" fxLayoutAlign="space-between start">
+							
+									<span>Vendas</span>
+									<span class="numeros-performance">16</span>
+									<span>R$ 213,00</span>
+									<div fxLayout="row" fxLayoutAlign="space-between start"> 
+										<span>Tempo on-line</span>
+										<span>04h30min</span>
+									</div>
+									<div fxLayout="row" fxLayoutAlign="space-between start"> 
+										<span>Cancelamentos</span>
+										<span>3</span>
+									</div>
+								
+								</div>
+	
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
 
 		</div>
 

@@ -8,13 +8,13 @@
   </mat-grid-tile>
 
   <mat-grid-tile colspan="4" rowHeight="100vh" >
-  		<div fxLayout="column" fxLayoutAlign="center stretch" style="margin:0; padding:0; height: 100%; " > 
+  		<div fxLayout="column" fxLayoutAlign="center stretch" style="margin:0; padding:0; height: 100%;" > 
 	  		<div fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 25px;" >
 	  			<img src="./assets/logo-image.jpeg" class="logo">
 	  		</div>
 
 	  		<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 25px;">
-			  <mat-form-field appearance="outline" floatLabel="always" hideRequiredMarker color="warn">
+			  <mat-form-field appearance="outline" floatLabel="always" hideRequiredMarker color="primary">
 			    <mat-label>Email</mat-label>
 			    <input matInput placeholder="name@email.com" [formControl]="email" required>
 			    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
@@ -24,26 +24,23 @@
 			
 
 			<div fxLayout="row" fxLayoutAlign="center center" >
-			  <mat-form-field appearance="outline" floatLabel="always"  hideRequiredMarker color="warn">
-			    <mat-label >Senha</mat-label>
+			  <mat-form-field appearance="outline" floatLabel="always"  hideRequiredMarker color="primary">
+			    <mat-label>Senha</mat-label>
 			    <input matInput [type]="hide ? 'password' : 'text'" required placeholder="Insira sua senha" >
 			    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-			    <mat-icon style="cursor: pointer;" color="warn">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>			    
+			    <mat-icon style="cursor: pointer;" color="primary">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>			    
 			    </button>
 			  </mat-form-field>			  
 			</div>
 
 			<div fxLayout="row" fxLayoutAlign="end center" style="margin: 0 15%;" >
-				<a href="#" style="color: blue;">Esqueci meu e-mail ou senha</a>
+				<a href="#" style="color: #009FE3;">Esqueci meu e-mail ou senha</a>
 			</div>
 
 			<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 25px;">
-				<button mat-raised-button color="warn" style="width: 70%; height: 40px; cursor: pointer;">Enviar</button>			   
+				<button class="botao-enviar"  mat-raised-button color="primary">Enviar</button>			   
 			</div>
 
-			<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 15px;">
-				<span>Ainda não tem cadastro? <a href="#" style="color: blue;" >Cadastre-se aqui</a></span>
-			</div>
 		</div>
   </mat-grid-tile>
  
@@ -60,13 +57,15 @@
   </mat-grid-tile>
 
   <mat-grid-tile colspan="4" rowHeight="100vh" >
-  		<div fxLayout="column" fxLayoutAlign="center stretch" style="margin:0; padding:0; height: 100%; " > 
+  		<div fxLayout="column" fxLayoutAlign="center stretch" style="margin:0; padding:0; height: 100%;" > 
 	  		<div fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 25px;" >
 	  			<img src="./assets/logo-image.jpeg" class="logo">
 	  		</div>
 
+	  		<div fxLayout="row" fxLayoutAlign="start center" style="margin-right: 15%; margin-left: 15%;"><span style="margin-top: 20px;">E-mail</span></div>
+
 	  		<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 25px;">
-			  <mat-form-field appearance="outline" floatLabel="always" hideRequiredMarker color="green">
+			  <mat-form-field appearance="outline" floatLabel="always" hideRequiredMarker color="primary">
 			    <mat-label>Email</mat-label>
 			    <input matInput placeholder="name@email.com" [formControl]="email" required>
 			    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
@@ -76,25 +75,25 @@
 			
 
 			<div fxLayout="row" fxLayoutAlign="center center" >
-			  <mat-form-field appearance="outline" floatLabel="always"  hideRequiredMarker>
+			  <mat-form-field appearance="outline" floatLabel="always"  hideRequiredMarker color="warn">
 			    <mat-label >Senha</mat-label>
-			    <input matInput [type]="hide ? 'password' : 'text'" required placeholder="Sua senha" >
+			    <input matInput [type]="hide ? 'password' : 'text'" required placeholder="Insira sua senha" >
 			    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-			    <mat-icon style="cursor: pointer;" >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>			    
+			    <mat-icon style="cursor: pointer;" color="primary">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>			    
 			    </button>
 			  </mat-form-field>			  
 			</div>
 
-			<div>
-				<a style="padding-left: 68%;" href="#">Esqueci meu e-mail ou senha</a>
+			<div fxLayout="row" fxLayoutAlign="end center" style="margin: 0 15%;" >
+				<a href="#" style="color: blue;">Esqueci meu e-mail ou senha</a>
 			</div>
 
-			<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 25px; background-color: green;">
-				<button mat-raised-button color="warn" style="width: 70%; cursor: pointer;">Enviar</button>			   
+			<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 25px;">
+				<button mat-raised-button color="primary" style="width: 70%; height: 40px; cursor: pointer; color: white;">Enviar</button>			   
 			</div>
 
 			<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 15px;">
-				<span>Ainda não tem cadastro? <a href="#">Cadastre-se aqui</a></span>
+				<span>Ainda não tem cadastro? <a href="#" style="color: blue;" >Cadastre-se aqui</a></span>
 			</div>
 		</div>
   </mat-grid-tile>

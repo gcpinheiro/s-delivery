@@ -1,17 +1,3 @@
-@mixin-app-root-typography($config) {
-	app-root{
-		label{
-			font-family: mat-font-family(config);
-			font-size: mat-font-size(config, title);
-			font-weight: mat-font-weight(config, title);
-			font-height: mat-font-height(config, title);
-		}
-	}
-}
-
-.sidenav-container{
-  font-family: 'Louis George Cafe';
-}
 span{
   font-family: 'Louis George Cafe';
   font-weight: bolder;
@@ -23,7 +9,7 @@ mat-icon.store {
 
 .sidenav-container {
   height: 100%;
-
+  font-family: 'Louis George Cafe';
 }
 
 .sidenav {

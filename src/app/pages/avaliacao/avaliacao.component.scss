@@ -1,0 +1,32 @@
+span{
+	font-family: 'Louis George Cafe';
+}
+.container{
+	font-family: 'Louis George Cafe';
+	width: 100%;
+	height: 100%;
+
+	.container-children{
+		width: 90%;
+		height: 100%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top: 50px;
+		.titulo-avaliações{
+			font-size: 30px;
+			font-weight: bolder;
+			color: #F9A825;
+			margin-bottom: 40px;
+		}
+		.informações-avaliações{
+			margin-top: 20px;
+			span{
+				margin-top:10px;
+				font-weight: bolder;
+			}
+		}
+	}
+}
+
+
+

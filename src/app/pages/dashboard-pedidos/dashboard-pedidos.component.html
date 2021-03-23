@@ -1,0 +1,130 @@
+<!-- CONTAINER MAIN -->
+
+<div fxLayout="column" fxLayoutAlign="center center" class="container">
+
+  <div class="container-child">
+
+    <div fxLayout="column" fxLayoutAlign="space-between stretch">
+
+      <h3 class="numeros-acompanhamento">Pedidos</h3> 
+      <h3>Filtrar por:</h3>
+    </div>
+
+      <div style="border-radius: 14px; border: 1px solid #fff;box-shadow: 0 5px 5px #a8a6a6; height: 200px;">
+
+        <!---------------------------------- FILTRO---------------------------------------- -->
+        <div fxLayout="row" fxLayoutAlign="space-around center" style="width: 100%; height: 100%;">
+
+          <!-- PRIMEIRA COLUNA -->
+
+          <div fxLayout="column" fxLayoutAlign="space-around center" style="height: 100%; width: 30%;">
+            <div fxLayout="row" fxLayoutAlign="start center" style="width: 100%;" >
+              <span>Número do pedido</span>
+            </div>
+            
+
+             <mat-form-field appearance="outline" color="primary" style="width: 100%; border-radius: 20px;">
+              <input matInput>
+            </mat-form-field>
+
+            <button mat-flat-button color="primary" style="width: 100%; border-radius: 20px;">Buscar</button>
+          </div> 
+
+          <!-- SEGUNDA COLUNA -->
+
+          <div fxLayout="column" fxLayoutAlign="space-around center" style="width: 30%; height: 100%;">
+            <div fxLayout="row" fxLayoutAlign="start center" style="width: 100%;" >
+              <span>De</span>
+            </div>
+            
+
+            <mat-form-field appearance="outline" class="example-form-field" style="width: 100%;">
+              <input matInput [matDatepicker]="datepicker">
+              <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+              <mat-datepicker #datepicker>
+                <mat-datepicker-actions>
+                  <button mat-button matDatepickerCancel>Cancel</button>
+                  <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                </mat-datepicker-actions>
+              </mat-datepicker>
+            </mat-form-field>
+
+            <button mat-stroked-button color="primary" style="width: 100%; border-color:#F9A825; border-radius: 20px; ">Mais Filtros</button>
+          </div>
+
+          <!-- TERCEIRA COLUNA -->
+
+           <div fxLayout="column" fxLayoutAlign="space-around center" style="width: 30%; height: 100%;">
+            <div fxLayout="row" fxLayoutAlign="start center" style="width: 100%;" >
+              <span>Até</span>
+            </div>
+            
+
+            <mat-form-field appearance="outline" class="example-form-field" style="width: 100%;">
+              <input matInput [matDatepicker]="datepicker">
+              <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+              <mat-datepicker #datepicker>
+                <mat-datepicker-actions>
+                  <button mat-button matDatepickerCancel>Cancel</button>
+                  <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                </mat-datepicker-actions>
+              </mat-datepicker>
+            </mat-form-field>
+
+             <div fxLayout="row" fxLayoutAlign="start center" style="width: 100%; height: 22px; color: #F9A825; margin-bottom: 15px;" >
+              <span style="font-size: 16px; cursor: pointer; margin-top: 20px; padding-left: 5px;">Limpar Filtro</span>
+            </div>
+            
+          </div>
+
+        </div> 
+      </div>
+      <!---------------------------------- TABELA ----------------------------------------->
+
+      <div style="border: 1px solid #fff; box-shadow: 0 5px 5px #a8a6a6; border-radius: 14px; height: 100%; width: 100%; margin-top: 50px; margin-bottom: 20px;">
+       
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%; border-radius: 14px;">
+
+          <!--COLUNA PEDIDOS-->
+          <ng-container matColumnDef="pedido">
+            <th mat-header-cell *matHeaderCellDef> N do pedido </th>
+            <td mat-cell *matCellDef="let element"> {{element.pedido}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="nomeCliente">
+            <th mat-header-cell *matHeaderCellDef> Nome do Cliente </th>
+            <td mat-cell *matCellDef="let element"> {{element.nomeCliente}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="data">
+            <th mat-header-cell *matHeaderCellDef> Data </th>
+            <td mat-cell *matCellDef="let element"> {{element.data}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="hora">
+            <th mat-header-cell *matHeaderCellDef> Hora </th>
+            <td mat-cell *matCellDef="let element"> {{element.hora}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="valor">
+            <th mat-header-cell *matHeaderCellDef> Valor </th>
+            <td mat-cell *matCellDef="let element"> {{element.valor}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let element"> <button class="botao-enviar"  mat-raised-button color="primary">{{element.status}}</button> </td>
+          </ng-container>
+
+          <ng-container matColumnDef="verDetalhes">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element"> {{element.verDetalhes}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        
+      </div>
+  </div>
+</div>

@@ -20,6 +20,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
+import { DashboardPedidosComponent } from './pages/dashboard-pedidos/dashboard-pedidos.component';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatTableModule} from '@angular/material/table';
+import { AvaliacaoComponent } from './pages/avaliacao/avaliacao.component';
+import {MatTabsModule} from '@angular/material/tabs';
+
+
 
 
 
@@ -31,6 +41,9 @@ import { MatMenuModule } from '@angular/material/menu';
     HomeComponent,
     DashboardComponent,
     MenuComponent,
+    PedidosComponent,
+    DashboardPedidosComponent,
+    AvaliacaoComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +62,12 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

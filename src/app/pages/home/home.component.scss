@@ -2,8 +2,9 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 14px;
   text-decoration: none;
+
 }
 
 .logo{   
@@ -18,11 +19,34 @@
     background-position: bottom;
 }
 
+.botao-enviar{
+  font-size: 16px;
+  width: 70%; 
+  height: 60px; 
+  cursor: pointer;
+  color: white; 
+  border-radius: 24px;
+}
+
+/*
 .mat-form-field.mat-form-field {
   font-size: 18px;
   width: 70%;  
 }
+*/
 
+
+//rever melhor.
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #F9A825 !important;
+}
+
+mat-form-field.mat-form-field {
+  font-size: 16px;
+  border-radius: 20px;
+  font-size: 18px;
+  width: 150px;
+}
 /*
 
 
